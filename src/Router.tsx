@@ -1,10 +1,19 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { HomePage } from './pages/Home.page';
+import FileUploadCloudinary from './pages/FileUploadCloudinary/FileUploadCloudinary';
+import { Home } from './pages/Home/Home';
+import { Shell } from './components/Shell/Shell';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />,
+    element: <Shell />,
+    children: [
+      { path: 'home', element: <Home /> },
+      {
+        path: 'file-upload-cloudinary',
+        element: <FileUploadCloudinary />,
+      },
+    ],
   },
 ]);
 
