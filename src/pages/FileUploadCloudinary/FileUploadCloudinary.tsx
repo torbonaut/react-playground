@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, FileInput, Loader } from '@mantine/core';
+import { Button, FileInput, Loader, Title } from '@mantine/core';
 
 const FileUploadCloudinary = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -25,7 +25,7 @@ const FileUploadCloudinary = () => {
 
   return (
     <div>
-      <h1>File Upload with Cloudinary</h1>
+      <Title>File Upload with Cloudinary</Title>
       <FileInput onChange={() => handleFileChange} accept="image/*" />
       <Button onClick={handleUpload} disabled={!selectedFile || isLoading}>
         {isLoading ? <Loader /> : 'Upload'}

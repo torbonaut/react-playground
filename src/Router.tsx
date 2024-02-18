@@ -8,7 +8,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <Shell />,
     children: [
-      { path: 'home', element: <Home /> },
+      { path: '/', element: <Home /> },
       {
         path: 'file-upload-cloudinary',
         element: <FileUploadCloudinary />,
